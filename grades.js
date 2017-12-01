@@ -17,6 +17,9 @@ let gradeB = 0;
 let gradeC = 0;
 let gradeD = 0;
 let gradeF = 0;
+// min and max Grade use the apply prototype. This allows you to compare objects in an array using that Max.max and Math.min protoypes.
+let minGrade = Math.min.apply(null,scores);
+let maxGrade = Math.max.apply(null, scores);
 
 function gradeCount(){
         console.log("There are " + gradeA + " A's in the class");
@@ -24,6 +27,8 @@ function gradeCount(){
         console.log("There are " + gradeC + " C's in the class");
         console.log("There are " + gradeD + " D's in the class");
         console.log("There are " + gradeF + " F's in the class");
+        console.log("The lowest grade in the class is " + minGrade);
+        console.log("The highest grade in the class is " + maxGrade);
 }
 
 
@@ -52,3 +57,4 @@ function gradedScores ( scores ) {
 }
 
 gradedScores(scores)
+
